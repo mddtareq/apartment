@@ -1,10 +1,23 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
+import Home from './components/Home/Home/Home';
+import {
+  BrowserRouter as Router,Switch,Route 
+} from "react-router-dom";
 
 const App = () => {
   return (
-    <div>
-      <h3>hi, i am akbor</h3>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/home">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 
