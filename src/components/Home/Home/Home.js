@@ -95,7 +95,6 @@ const Home = () => {
         <>
          <Header />
          <Body houseRent={houseRent} service={service} />
-         <Footer />
         </>
     );
 };

@@ -4,6 +4,7 @@ import './HouseRent.scss';
 import location from '../../../../images/logos/map-marker-alt-solid 1.png';
 import bedroom from '../../../../images/logos/bed 1.png';
 import bathroom from '../../../../images/logos/bath 1.png';
+import { Link } from 'react-router-dom';
 
 const HouseRent = ({ houseRent }) => {
     return (
@@ -33,7 +34,7 @@ const HouseRent = ({ houseRent }) => {
                                         </div>
                                         <div className="price-button d-flex justify-content-between mt-4">
                                             <h2>${house.price}</h2>
-                                            <button>View Details</button>
+                                            <Link to='/home/details'><button>View Details</button></Link>
                                         </div>
                                     </Card.Body>
                                 </Card>

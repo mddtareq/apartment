@@ -5,7 +5,7 @@ import HouseSearch from './HouseSearch/HouseSearch';
 const Header = () => {
     return (
         <>
-         <AppBar />
+         
          <HouseSearch />
         </>
     );
