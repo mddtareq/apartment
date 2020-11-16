@@ -20,7 +20,8 @@ function Login() {
       password:'',
       photo:'',
       confirmPassword:"",
-      destination:""
+      destination:"",
+      error:"",
     });
 
     initializeLoginFramework();
