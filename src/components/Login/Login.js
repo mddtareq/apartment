@@ -10,8 +10,8 @@ import fbLogo from '../../Icon/fb.png';
 import googleLogo from '../../Icon/google.png';
 
 
-function Login() {
-  const [newUser, setNewUser] = useState(false);
+const Login = () => {
+    const [newUser, setNewUser] = useState(false);
   const [user, setUser] = useState({
     // before sing in user value
     isSignedIn: false,
@@ -101,10 +101,8 @@ function Login() {
     }
     e.preventDefault();
   };
-
-
-  return (
-    <div>
+    return (
+        <div>
       <div style={{ textAlign: "center" }}>
         <form onSubmit={handleSubmit}>
           {newUser ?
@@ -154,7 +152,7 @@ function Login() {
         <p style={{ color: 'red' }}>{user.error} </p>
       </div>
     </div>
-  );
-}
+    );
+};
 
 export default Login;

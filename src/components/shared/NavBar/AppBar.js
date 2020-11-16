@@ -20,7 +20,7 @@ const AppBar = () => {
                         <NavLink to="/concerns">Concerns</NavLink>
                         <NavLink to="/event">Event</NavLink>
                         <NavLink to="/contact">Contact</NavLink>
-                        <button className="button ml-2">Login</button>
+                        <NavLink to="/login"><button className="button ml-2">Login</button></NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

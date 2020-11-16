@@ -8,14 +8,13 @@ import {
 } from "react-router-dom";
 import Footer from './components/shared/Footer/Footer';
 import AppBar from './components/shared/NavBar/AppBar';
-// import Login from './components/Authentication/Login/Login';
+import Login from './components/Login/Login';
 export const UserContext = createContext();
 const App = () => {
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
     <UserContext.Provider value = {[loggedInUser, setLoggedInUser]}>
     <Router>
-      {/* <Login></Login> */}
       <AppBar></AppBar>
       <Switch>
         <Route exact path="/">
@@ -27,11 +26,11 @@ const App = () => {
         <Route  path="/home/details">
         <ApartmentView></ApartmentView>
         </Route>
+        <Route  path='/login'>
+        <Login></Login>
+        </Route>
         <Route  path="*">
           <h1 className='text-center p-5 m-5'>Not Found</h1>
-        </Route>
-        <Route path='/login'>
-
         </Route>
       </Switch>
       <Footer></Footer>
