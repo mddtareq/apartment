@@ -1,0 +1,20 @@
+$color: #275A53;
+@mixin heading($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+    text-align: center;
+    color: $color;
+}
+main {
+    width: 100%;
+    height: auto;
+    background-color: #E5E5E5;
+    padding: 20px 0px 30px 0px;
+
+    h4 {
+        @include heading(16px, 500);
+    }
+    h2 {
+        @include heading(34px, 700);
+    }
+}

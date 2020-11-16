@@ -87,7 +87,7 @@ const Footer = () => {
                                 available to answer any
                                 question 24/7.
                             </p>
-                            <div className="contact">
+                            <div className="contact text-center">
                                 {
                                     contact.map(contact =>
                                         <img
