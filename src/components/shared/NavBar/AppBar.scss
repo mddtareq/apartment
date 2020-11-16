@@ -1,0 +1,40 @@
+$menu-color: black;
+$color: #275A53;
+.logo{
+    width: 30%;
+}
+.navbar-nav a{
+    color: $menu-color;
+    font-size: 18px;
+    font-weight: 450;
+    padding: 10px 17px;
+    &:hover {
+        color: $color;
+        transition: 0.07s;
+        text-decoration: none;
+      }
+}
+.button{
+    width: 104px;
+    height: 44px;
+    font-size: 18px;
+    color: white;
+    background-color: $color;
+    padding: 0px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+        background-color: #3b867c;
+        transition: 0.07s;
+      }
+      &:focus {
+        outline: none;
+        background-color: #3b867c
+      }
+}
+@media only screen and (max-width: 365px) { 
+    .company-logo{
+        width: 80%;
+    }
+}

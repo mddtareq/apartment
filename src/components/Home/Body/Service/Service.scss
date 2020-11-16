@@ -1,0 +1,18 @@
+$color: #16322E;
+#service {
+    img {
+        width: 75px;
+        height: 75px;
+    }
+    h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: $color;
+    }
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        color: #606268;
+    }
+}
