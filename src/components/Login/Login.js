@@ -26,7 +26,7 @@ const Login = () => {
 
   initializeLoginFramework();
 
-  const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+  const [,setLoggedInUser] = useContext(UserContext);
   const history = useHistory();
   const location = useLocation()
   let { from } = location.state || { from: { pathname: "/" } };
@@ -36,6 +36,11 @@ const Login = () => {
     handleGoogleSignIn()
       .then(res => {
         handleResponse(res, true)
+      })
+      .catch(err => {
+        setLoggedInUser({
+          error: err.message
+        })
       })
   };
 
@@ -126,7 +131,7 @@ const Login = () => {
                 required
               /></p>
               <p><small><input style={{ width: "90%" }} className="dual-btn" type="submit" value="Create an account" /></small></p>
-              <p><small>{newUser ? "Already have an account?" : "Don't have an account?"}<Link style={{ color: "rgb(250, 189, 36)" }} onClick={() => setNewUser(!newUser)} name="new-user">{newUser ? "Login" : "Create an account"}</Link></small></p>
+              <p><small>{newUser ? "Already have an account?" : "Don't have an account?"}<Link  style={{ color: "rgb(250, 189, 36)" }} onClick={() => setNewUser(!newUser)} name="new-user">{newUser ? "Login" : "Create an account"}</Link></small></p>
             </div>
             :
             <div className="input-form">

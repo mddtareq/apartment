@@ -15,7 +15,7 @@ const App = () => {
   return (
     <UserContext.Provider value = {[loggedInUser, setLoggedInUser]}>
     <Router>
-      <AppBar></AppBar>
+      <AppBar />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -23,17 +23,17 @@ const App = () => {
         <Route exact path="/home">
           <Home />
         </Route>
-        <Route  path="/home/details">
-        <ApartmentView></ApartmentView>
+        <Route  path="/home/details/:id">
+        <ApartmentView />
         </Route>
         <Route  path='/login'>
-        <Login></Login>
+        <Login />
         </Route>
         <Route  path="*">
           <h1 className='text-center p-5 m-5'>Not Found</h1>
         </Route>
       </Switch>
-      <Footer></Footer>
+      <Footer />
     </Router>
     </UserContext.Provider >
 

@@ -28,8 +28,7 @@ export const handleGoogleSignIn = () =>{
     })
     // error handling
     .catch(err=>{
-      console.log(err);
-      console.log(err.message);
+      return err;
     })
   }
 
