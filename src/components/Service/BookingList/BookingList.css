@@ -1,0 +1,19 @@
+.big-sec{
+    border-left: 1px solid #f4f7fc;
+    border-top: 1px solid #f4f7fc;
+    background-color: #f4f7fc;
+    height: 510px;
+    width: 100%;
+}
+.table-sec{
+    margin: 20px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.table thead{
+    margin-top: 20px;
+    background-color: #f4f7fc;
+    border-radius: 10px;
+}

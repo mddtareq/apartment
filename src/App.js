@@ -9,6 +9,7 @@ import {
 import Footer from './components/shared/Footer/Footer';
 import AppBar from './components/shared/NavBar/AppBar';
 import Login from './components/Login/Login';
+import Service from './components/Service/Service';
 export const UserContext = createContext();
 const App = () => {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -28,6 +29,9 @@ const App = () => {
         </Route>
         <Route  path='/login'>
         <Login />
+        </Route>
+        <Route path='/service'>
+          <Service/>
         </Route>
         <Route  path="*">
           <h1 className='text-center p-5 m-5'>Not Found</h1>
