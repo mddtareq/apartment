@@ -1,0 +1,21 @@
+.add-sec{
+    border: 1px white solid;
+    border-radius: 20px;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+}
+.add-sec input{
+    width: 80%;
+    margin-bottom: 20px;
+}
+.submit-btn{
+    background-color: rgba(39, 90, 83, 1);
+    color: white;
+    float: right;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-right: 25px;
+    padding: 5px 20px;
+}
