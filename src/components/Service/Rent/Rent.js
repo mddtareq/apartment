@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
 
 const Rent = () => {
     const [rent, setRent] = useState([]);
@@ -49,4 +50,14 @@ const Rent = () => {
     );
 };
 
-export default Rent;
+const mapStateToProps = (state) => {
+    return {
+    }
+}
+
+const mapDispatchToProps = {
+    
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Rent);

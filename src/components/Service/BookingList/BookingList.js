@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Form } from 'react-bootstrap';
+import { connect } from 'react-redux';
 import './BookingList.css'
 
 const BookingList = () => {
@@ -64,4 +65,14 @@ const BookingList = () => {
     );
 };
 
-export default BookingList;
+const mapStateToProps = (state) => {
+    return {
+    }
+}
+
+const mapDispatchToProps = {
+   
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookingList);
