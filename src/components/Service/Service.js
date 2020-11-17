@@ -25,9 +25,9 @@ const Service = () => {
     }
 
     return (
-        <div className="container">
+        <div>
             <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-2">
                     <br /><br />
                     <button onClick={list} style={{ border: 'none', background: "none", outline: 'none' }}><p> <img style={{ width: '17px', marginBottom: '5px' }} src={List} alt="" />  Booking list</p></button>
                     <br />
@@ -35,7 +35,7 @@ const Service = () => {
                     <br />
                     <button onClick={rent} style={{ border: 'none', background: "none", outline: 'none' }}><p > <img style={{ width: '17px', marginBottom: '5px' }} src={rentI} alt="" /> My rent</p></button>
                 </div>
-                <div className="col-md-9">
+                <div className="col-md-10">
                     <div id="list">
                         <BookingList></BookingList>
                     </div>

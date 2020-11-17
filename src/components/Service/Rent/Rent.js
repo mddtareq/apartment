@@ -1,7 +1,14 @@
-import React from 'react';
-import SideNav from '../SideNav/SideNav';
+import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 const Rent = () => {
+    const [rent, setRent] = useState([]);
+
+    useEffect(() => {
+        fetch("https://tranquil-ocean-50550.herokuapp.com/getAllRent")
+        .then(res => res.json())
+        .then(result => setRent(result));
+    },[])
     return (
         <div className="row">
             <div className="col-md-12 mt-3">
@@ -9,7 +16,7 @@ const Rent = () => {
                <div className="big-sec">
                 <div className="small-sec">
                         <div className="table-sec">
-                            <table class="table table-borderless">
+                            <table className="table table-borderless">
                                 <thead>
                                     <tr>
                                         <th scope="col">House Name</th>
@@ -18,16 +25,20 @@ const Rent = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {/* {
-                                        serviceList.map(service =>
-                                            <tr>
-                                                <td>{service.name} </td>
-                                                <td>{service.email} </td>
-                                                <td>{service.projectName} </td>
-                                                <td>{service.details} </td>
-                                                <td>{} </td>
+                                    {
+                                        rent.map(rent =>
+                                            <tr key={rent._id}>
+                                                <td>{rent.name} </td>
+                                                <td>${rent.price} </td>
+                                                <td style={{float:'right'}}>
+                                                    <Button 
+                                                    variant="success"
+                                                    >
+                                                        Action
+                                                    </Button>
+                                                </td>
                                             </tr> )
-                                    } */}
+                                    }
                                 </tbody>
                             </table>
                         </div>

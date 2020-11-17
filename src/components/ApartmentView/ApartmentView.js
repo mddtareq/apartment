@@ -14,7 +14,7 @@ const ApartmentView = () => {
     const [house, setHouse] = useState({});
 
     useEffect( () => {
-        fetch(`http://localhost:5000/house/${id}`)
+        fetch(`https://tranquil-ocean-50550.herokuapp.com/house/${id}`)
         .then( res => res.json())
         .then(result => setHouse(result));
     }, [id]);
@@ -46,7 +46,7 @@ const ApartmentView = () => {
             else if (!reqInfo.message) {
                 alert("Message is Empty");
             } else {
-                fetch("http://localhost:5000/addBooking", {
+                fetch("https://tranquil-ocean-50550.herokuapp.com/addBooking", {
                     method: "POST",
                     headers: { 'Content-type': 'application/json; charset=UTF-8' },
                     body: JSON.stringify(reqInfo)

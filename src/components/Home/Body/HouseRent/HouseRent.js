@@ -16,7 +16,7 @@ const HouseRent = ({ houseRent }) => {
                         houseRent.map(house =>
                             <Col lg={4} md={6} sm={6} key={house._id}>
                                 <Card style={{ width: '100%' }} className="mt-4">
-                                    {/* <Card.Img variant="top" src={house.image} /> */}
+                                    <Card.Img variant="top" src={`data:image/png;base64,${house.img.img}`}  />
                                     <Card.Body>
                                         <Card.Title className="mb-1">{house.name}</Card.Title>
                                         <div className="house-location">
